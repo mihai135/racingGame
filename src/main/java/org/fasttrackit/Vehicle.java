@@ -19,7 +19,7 @@ public class Vehicle {
         return traveledDistance;
     }
 
-//example of mehod overloading
+//example of method overloading
     public double accelerate (double speed){
         return accelerate(speed, 1);
     }
@@ -46,5 +46,14 @@ public class Vehicle {
 
     public void setMileage(double mileage) {
         this.mileage = mileage;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                ", mileage=" + mileage +
+                '}';
     }
 }
