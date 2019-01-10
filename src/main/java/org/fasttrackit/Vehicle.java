@@ -16,9 +16,12 @@ public class Vehicle {
         System.out.println(name + "has accelerated with " + speed + " km/h for "
         + durationInHours);
         double traveledDistance = speed * durationInHours;
-
         return traveledDistance;
+    }
 
+//example of mehod overloading
+    public double accelerate (double speed){
+        return accelerate(speed, 1);
     }
 
     public String getName() {

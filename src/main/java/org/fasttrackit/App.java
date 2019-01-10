@@ -42,6 +42,16 @@ public class App
         System.out.println("value from vehicle 2: " + vehicle2.vehicleCount);
         System.out.println("value from Vehicle class: " + Vehicle.vehicleCount);
 
+        new AutoVehicle();
+
+        new AutoVehicle(new Engine());
+
+        double acc = vehicle1.accelerate(100);
+        System.out.println(acc);
+
+        double acc2 = vehicle1.accelerate(100, 4);
+        System.out.println(acc2);
+
 
 
 
