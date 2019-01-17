@@ -28,6 +28,7 @@ public class Game {
         System.out.println("Welcome! Today's competitors are: ");
         for (int i = 0; i < competitors.size(); i++){
             System.out.println(competitors.get(i).getName());
+            
         }
 
     }
