@@ -15,7 +15,7 @@ public class Vehicle {
     }
 
     public double accelerate(double speed, double durationInHours){
-        System.out.println(name + "has accelerated with " + speed + " km/h for "
+        System.out.println(name + " has accelerated with " + speed + " km/h for "
         + durationInHours);
         double traveledDistance = speed * durationInHours;
 
