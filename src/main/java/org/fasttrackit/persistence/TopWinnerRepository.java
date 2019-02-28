@@ -10,7 +10,7 @@ import java.util.List;
 public class TopWinnerRepository {
 
     public void createTopWinner(TopWinner topWinner) throws SQLException, IOException, ClassNotFoundException {
-        Connection connection = DatabaseConfiguration.getConnection();
+        try (Connection connection = DatabaseConfiguration.getConnection()) {
 
         String insertSql = "INSERT INTO top_winners (`name`, wonRaces) VALUES(?,?)" +
                 "ON DUPLICATE KEY UPDATE wonRaces = wonRaces+1;";
@@ -19,7 +19,7 @@ public class TopWinnerRepository {
         preparedStatement.setString(1, topWinner.getName());
         preparedStatement.setInt(2, topWinner.getWonRaces());
 
-        preparedStatement.executeUpdate();
+        preparedStatement.executeUpdate();}
 
     }
 
